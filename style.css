@@ -1,0 +1,19 @@
+body{
+    background-color: #001632;
+}
+h1{
+    color: #808b98;
+}
+h3{
+    color: #fffefa;
+}
+.ms-container{
+    max-width: 800px;
+    padding: 10px 20px;
+    background-color: #cff4fc;
+    margin: auto;
+    border-radius: 10px;
+}
+.form{
+    background-color: #f8f9fa;
+}
