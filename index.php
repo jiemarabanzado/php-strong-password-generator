@@ -7,7 +7,16 @@
         array_push($upperCase,$temp);
     }
 
+    $passLength=$_GET["length"];
 
+    function Test(){
+        if(empty($passLength)){
+             echo 'inserisci una lunghezza per la password';
+        }else{
+            echo $passLength;
+            var_dump($passLength);
+        }
+    }
 
 ?>
 
@@ -26,7 +35,7 @@
         <h1 class="pt-4">Strong Password Generator</h1>
         <h3 class="mb-4">Genera una password sicura</h3>
         <div class="ms-container mb-3">
-            <?php echo $letters[1] ?>
+            <?php Test() ?>
         </div>
         <div class="form ms-container text-start">
             <div>
