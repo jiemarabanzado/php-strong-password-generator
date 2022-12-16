@@ -1,5 +1,8 @@
 <?php 
     session_start();
+    if($_SESSION["password"]==''){
+        header("Location: http://localhost/php-strong-password-generator/");
+    }
 
 ?>
 

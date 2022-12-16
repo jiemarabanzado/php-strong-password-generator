@@ -1,9 +1,12 @@
 <?php 
+    
     session_start();
+    session_unset();
+    
     include __DIR__ ."/function.php";
     if(!empty($_GET["length"])){
         $_SESSION['password']=Generate($_GET["length"],$_GET["ripetition"],$_GET["addNum"],$_GET["addSpec"]);
-        //header("Location: http://localhost/php-strong-password-generator/password.php");
+        header("Location: http://localhost/php-strong-password-generator/password.php");
     }
     
     $passLength=$_GET["length"];
