@@ -2,12 +2,14 @@
     session_start();
     include __DIR__ ."/function.php";
     if(!empty($_GET["length"])){
-        $_SESSION['password']=Generate($_GET["length"],$_GET["ripetition"]);
+        $_SESSION['password']=Generate($_GET["length"],$_GET["ripetition"],$_GET["addNum"],$_GET["addSpec"]);
         //header("Location: http://localhost/php-strong-password-generator/password.php");
     }
     
     $passLength=$_GET["length"];
     $ripetition=$_GET["ripetition"];
+    $passNum=$_GET["addNum"];
+    $passSpec=$_GET["addSpec"];
     
 ?>
 
@@ -46,7 +48,7 @@
                             <input type="number" required name="length" min="4" max="40">
                         </div>
                     </div>
-                    <div class="ripetition row">
+                    <div class="ripetition row mb-3">
                         <div class="col-7">
                             <div>Consenti la ripetizione dei caratteri:</div>
                         </div>
@@ -58,6 +60,24 @@
                                 </div>
                                 <div>
                                 <input type="checkbox" name="ripetition" value="no-repeat" checked> Non consentire
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="extra row">
+                        <div class="col-7">
+                            <div>Aggiungi caratteri:</div>
+                        </div>
+                        <div class="col-5">
+                            <div>
+                                <div>
+                                <input type="checkbox" name="addNum" value="add"> Numeri
+                                    
+                                </div>
+                                <div>
+                                <input type="checkbox" name="addSpec" value="add"> Caratteri speciali
                                     
                                 </div>
                             </div>
